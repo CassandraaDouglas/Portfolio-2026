@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Cassandra Douglas</title>
+  <meta name="description" content="Get in touch with Cassandra Douglas, UX designer and creative technologist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <script>if(!sessionStorage.getItem('cd_auth')){window.location.replace('password.html');}</script>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">CD</a>
+      <ul class="nav__links">
+        <li><a href="work.html" class="nav__link">Work</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="contact-page">
+    <div class="container contact-inner">
+
+      <!-- LEFT COLUMN -->
+      <div class="contact-left">
+        <p class="contact-left__label">Let's talk</p>
+        <h1 class="contact-left__title">
+          Got something<br><em>worth building?</em>
+        </h1>
+        <p class="contact-left__desc">
+          Whether it's a messy systems problem, an ambitious product,
+          or a design team that needs direction — I'd love to hear about it.
+          Reach out and let's find out if we're a fit.
+        </p>
+
+        <div class="contact-links">
+          <a href="mailto:ux.ui@cassandraadouglas.com" class="contact-link">
+            <span class="contact-link__icon">@</span>
+            ux.ui@cassandraadouglas.com
+          </a>
+          <a href="https://linkedin.com/in/cassandradouglas" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <span class="contact-link__icon">in</span>
+            linkedin.com/in/cassandradouglas
+          </a>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="contact-right">
+        <div class="contact-form">
+
+          <form id="contactForm" action="mailto:ux.ui@cassandraadouglas.com" method="POST">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Jane" required>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">What's this about?</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry, collaboration, say hi..." required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project, timeline, and what you're hoping to accomplish..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit">Send Message</button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="form-success__icon">✦</div>
+            <h3 class="form-success__title">Message sent.</h3>
+            <p class="form-success__text">Thanks for reaching out — I'll get back to you within 1–2 business days.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Cassandra Douglas</span>
+      <nav class="footer__nav">
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer__copy">© 2025</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
