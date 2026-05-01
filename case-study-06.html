@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Spoke to Suite — Cassandra Douglas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
+</head>
+<body>
+
+  <script>if(!sessionStorage.getItem('cd_auth')){window.location.replace('password.html');}</script>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">CD</a>
+      <ul class="nav__links">
+        <li><a href="work.html" class="nav__link">Work</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cs-hero container">
+    <a href="work.html" class="cs-hero__back">← Back to Work</a>
+    <div class="cs-hero__tags">
+      <span class="tag">UX Design</span>
+      <span class="tag">Design Systems</span>
+      <span class="tag">B2B Platform</span>
+      <span class="tag">Agent Experience</span>
+    </div>
+    <h1 class="cs-hero__title">From Spoke to Suite</h1>
+    <p class="cs-hero__desc">
+      Cyber insurance quoting lived on its own island. Agents knew it,
+      research confirmed it, and it fell to a new team to change that.
+    </p>
+    <div class="cs-hero__image">
+      <img src="img/cs5-ds-update.jpg" alt="Cyber Central after design system migration">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <p class="cs-stat__label">Role</p>
+        <p class="cs-stat__value">UX Designer</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Timeline</p>
+        <p class="cs-stat__value">9 months, 2022–2023</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Tools</p>
+        <p class="cs-stat__value">Figma</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Impact</p>
+        <p class="cs-stat__value">First DS migration at Chubb; Cyber consolidated into Marketplace</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-body container">
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">01. Context &amp; Challenge</p>
+      <h2 class="cs-section__title">A platform with a gap agents had to work around every day.</h2>
+      <p>
+        Cyber Central was its own world. Agents and brokers using Chubb's Marketplace to quote
+        for clients could access most products in one place, but to quote Cyber, they had to
+        leave entirely. A separate spoke site with its own navigation, its own login context,
+        its own experience. Research had already confirmed what agents were experiencing: the
+        split created friction in an already complex workflow and made the overall platform
+        feel incomplete.
+      </p>
+      <p>
+        The design system added another layer of complexity. At the time I joined, the Chubb
+        design system was in its early stages. Most products across the company hadn't yet
+        made the switch to the Angular version that supported it. There was no established
+        migration playbook, and our team was new enough that most of the organization didn't
+        know we existed yet.
+      </p>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">02. My Role &amp; Process</p>
+      <h2 class="cs-section__title">Migrating a product, then moving it home.</h2>
+      <p>
+        I was brought in alongside another designer to work on Cyber Central, where I took on
+        two parallel tracks: designing the batch quote feature, which allowed agents to submit
+        multiple quotes in a single action rather than one at a time, and owning the full
+        lift-and-shift of Cyber Central to the new design system. I was the first designer
+        at Chubb to migrate an entire product to the DS, which meant building the approach
+        as I went.
+      </p>
+      <p>
+        The migration required mapping every existing component to its design system equivalent,
+        identifying gaps where DS components didn't yet exist, and working closely with
+        engineering to navigate the Angular version constraints. Beyond the component work,
+        I was thinking about what the experience should feel like once the foundation was
+        right, which shaped the updated information hierarchy and dashboard structure.
+      </p>
+      <div class="cs-photo-labeled">
+        <span class="cs-photo-label">Before</span>
+        <img src="img/cs5-before.jpg" alt="Cyber Central before, standalone dashboard with custom navigation" class="cs-photo">
+      </div>
+      <div class="cs-photo-labeled">
+        <span class="cs-photo-label cs-photo-label--after">After</span>
+        <img src="img/cs5-ds-update.jpg" alt="Cyber Central after design system migration, updated hierarchy, KPI cards, and DS components" class="cs-photo">
+      </div>
+      <p>
+        Once Cyber moved into Marketplace, I transitioned into owning the Cyber and Auto
+        product experience within the platform. That meant bringing batch quote and multi-quote
+        capabilities into Marketplace quoting flow, and contributing to the broader
+        appetite and product selection experience that agents use to build coverage
+        recommendations for their clients.
+      </p>
+      <img src="img/cs5-mp-dashboard.jpg" alt="Marketplace dashboard showing Cyber Specialized Quoting with Batch quote and Quick indication entry points" class="cs-photo">
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">03. Constraints &amp; Organizational Context</p>
+      <h2 class="cs-section__title">The hardest part wasn't the design.</h2>
+      <div class="cs-callout">
+        <p>
+          Our team was new, and the organization hadn't caught up to our existence yet.
+          That gap affected how quickly we could build alignment, secure engineering
+          resources, and move decisions forward.
+        </p>
+      </div>
+      <p>
+        The early-stage design system added real technical friction: the Angular version
+        mismatch meant components couldn't simply be swapped in. Every migration decision
+        required a conversation with engineering. Working through that without an established
+        process, and being the first to do it, meant there was no playbook to reference.
+        We were building it as we shipped.
+      </p>
+      <p>
+        The structural disconnect between the Cyber spoke site and Marketplace teams
+        created coordination challenges that weren't always visible from the design side.
+        Bringing Cyber into Marketplace wasn't just a design migration. It was an
+        organizational alignment problem that design work had to navigate alongside.
+      </p>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">04. Outcomes &amp; Impact</p>
+      <h2 class="cs-section__title">Cyber found its home. And a precedent was set.</h2>
+      <p>
+        The consolidation shipped. Cyber now lives as a first-class product within the
+        Marketplace, accessible to agents without leaving the platform they already work in,
+        sitting alongside BOP, Auto, Umbrella, and the rest of Chubb's small business suite.
+      </p>
+      <img src="img/cs5-appetite.jpg" alt="Marketplace appetite page — Cyber as a first-class product in the Chubb small business suite" class="cs-photo">
+      <p>
+        The batch quote and multi-quote capabilities we built on Cyber Central made it into
+        Marketplace experience, surfaced directly on the dashboard as dedicated entry
+        points within the Cyber Specialized Quoting section.
+      </p>
+      <p>
+        The design system migration set a precedent. Being the first designer to flip a
+        product to the DS meant that teams who came after had something to reference: a
+        proof of concept that the migration could be done, and a rough map of the process.
+        What started as figuring it out alone became the foundation for how DS adoption
+        scaled across other products at Chubb.
+      </p>
+    </div>
+
+    <div class="cs-nav">
+      <a href="case-study-05.html" class="cs-nav__item">
+        <p class="cs-nav__dir">← Previous</p>
+        <p class="cs-nav__title">Protect What You Collect</p>
+      </a>
+      <a href="work.html" class="cs-nav__item cs-nav__item--next">
+        <p class="cs-nav__dir">All Work →</p>
+        <p class="cs-nav__title">Back to Case Studies</p>
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Cassandra Douglas</span>
+      <nav class="footer__nav">
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer__copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

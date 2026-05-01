@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
 </head>
 <body>
 
@@ -24,6 +25,9 @@
         <li><a href="resume.html" class="nav__link">Resume</a></li>
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
     </div>
   </nav>
 
@@ -31,14 +35,14 @@
     <div class="container contact-inner">
 
       <!-- LEFT COLUMN -->
-      <div class="contact-left">
+      <div class="contact-left fade-section">
         <p class="contact-left__label">Let's talk</p>
         <h1 class="contact-left__title">
           Got something<br><em>worth building?</em>
         </h1>
         <p class="contact-left__desc">
           Whether it's a messy systems problem, an ambitious product,
-          or a design team that needs direction — I'd love to hear about it.
+          or a design team that needs direction. I'd love to hear about it.
           Reach out and let's find out if we're a fit.
         </p>
 
@@ -47,15 +51,15 @@
             <span class="contact-link__icon">@</span>
             ux.ui@cassandraadouglas.com
           </a>
-          <a href="https://linkedin.com/in/cassandradouglas" target="_blank" rel="noopener noreferrer" class="contact-link">
+          <a href="https://linkedin.com/in/cassdouglas" target="_blank" rel="noopener noreferrer" class="contact-link">
             <span class="contact-link__icon">in</span>
-            linkedin.com/in/cassandradouglas
+            linkedin.com/in/cassdouglas
           </a>
         </div>
       </div>
 
       <!-- FORM -->
-      <div class="contact-right">
+      <div class="contact-right fade-section">
         <div class="contact-form">
 
           <form id="contactForm" action="mailto:ux.ui@cassandraadouglas.com" method="POST">
@@ -91,7 +95,7 @@
           <div class="form-success" id="formSuccess">
             <div class="form-success__icon">✦</div>
             <h3 class="form-success__title">Message sent.</h3>
-            <p class="form-success__text">Thanks for reaching out — I'll get back to you within 1–2 business days.</p>
+            <p class="form-success__text">Thanks for reaching out. I'll get back to you within 1 to 2 business days.</p>
           </div>
 
         </div>
@@ -108,7 +112,7 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <span class="footer__copy">© 2025</span>
+      <span class="footer__copy">© 2026</span>
     </div>
   </footer>
 

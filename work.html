@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
 </head>
 <body>
 
@@ -24,13 +25,16 @@
         <li><a href="resume.html" class="nav__link">Resume</a></li>
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
     </div>
   </nav>
 
   <div class="page-hero container">
-    <p class="page-hero__label">Selected Work</p>
-    <h1 class="page-hero__title">
-      Five problems.<br>Five solutions. <em>Intentional</em>.
+    <p class="page-hero__label fade-section">Selected Work</p>
+    <h1 class="page-hero__title fade-section">
+      Projects that challenged me, changed me, and shipped.
     </h1>
     <p class="page-hero__sub">
       Case studies spanning systems design, rapid prototyping, research,
@@ -41,91 +45,98 @@
   <div class="work-list container">
     <div class="work-list__grid">
 
-      <a href="case-study-1.html" class="work-card work-card--wide fade-section">
+      <a href="case-study-01.html" class="work-card work-card--wide fade-section">
         <div class="work-card__image">
-          <div class="work-card__placeholder" style="--hue: 250"></div>
+          <img src="img/cs01-hero.png" alt="API Connect ingestion onboarding new design">
         </div>
         <div class="work-card__content">
           <p class="work-card__number">01</p>
           <div class="work-card__meta">
-            <span class="tag">UX Research</span>
-            <span class="tag">B2B</span>
-            <span class="tag">Systems Design</span>
+            <span class="tag">Internal Tools</span>
+            <span class="tag">AI-Assisted Design</span>
+            <span class="tag">Data Platform</span>
           </div>
-          <h3 class="work-card__title">Quoting at the Speed of Trust</h3>
-          <p class="work-card__desc">Redesigning the agent-facing product quoting experience for a major insurance provider. Reduced quote completion time by 40% and improved agent satisfaction scores by 32%.</p>
+          <h3 class="work-card__title">From Manual Mapping to Guided Configuration</h3>
+          <p class="work-card__desc">Designed Chubb's API Connect ingestion onboarding experience — a unified interface with an AI-assisted expression builder that automates field matching and eliminates the manual rework triggered by every schema change.</p>
           <span class="work-card__cta">View Case Study →</span>
         </div>
       </a>
 
-      <a href="case-study-2.html" class="work-card fade-section">
+<a href="case-study-03.html" class="work-card work-card--wide fade-section">
         <div class="work-card__image">
-          <div class="work-card__placeholder" style="--hue: 170"></div>
-        </div>
-        <div class="work-card__content">
-          <p class="work-card__number">02</p>
-          <div class="work-card__meta">
-            <span class="tag">Design Systems</span>
-            <span class="tag">Documentation</span>
-          </div>
-          <h3 class="work-card__title">The Living Design System</h3>
-          <p class="work-card__desc">Evolving a design system across 12 product teams globally. Achieved 3× faster component adoption and reduced design-dev handoff friction by 65%.</p>
-          <span class="work-card__cta">View Case Study →</span>
-        </div>
-      </a>
-
-      <a href="case-study-3.html" class="work-card fade-section">
-        <div class="work-card__image">
-          <div class="work-card__placeholder" style="--hue: 320"></div>
+          <video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:cover;display:block;">
+            <source src="img/chubb-everyday.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="work-card__content">
           <p class="work-card__number">03</p>
           <div class="work-card__meta">
-            <span class="tag">Service Design</span>
-            <span class="tag">Facilitation</span>
+            <span class="tag">D2C</span>
+            <span class="tag">Agentic Prototyping</span>
+            <span class="tag">Design Systems</span>
           </div>
-          <h3 class="work-card__title">Mapping the Invisible</h3>
-          <p class="work-card__desc">Service blueprinting initiative that aligned 6 cross-functional teams in 3 workshops, surfacing invisible friction points across a complex insurance product lifecycle.</p>
+          <h3 class="work-card__title">Chubb Everyday: Agentic Prototype</h3>
+          <p class="work-card__desc">Built and deployed a unified D2C insurance platform POC in 1 week using an entirely agentic workflow — Claude Code, Figma MCP, and the Chubb Design System MCP. Currently in consideration for production.</p>
           <span class="work-card__cta">View Case Study →</span>
         </div>
       </a>
 
-      <a href="case-study-4.html" class="work-card fade-section">
+      <a href="case-study-04.html" class="work-card fade-section">
         <div class="work-card__image">
-          <div class="work-card__placeholder" style="--hue: 20"></div>
+          <img src="img/cs2-hero.png" alt="Chubb Renters Insurance mobile screens showing the quote flow">
         </div>
         <div class="work-card__content">
           <p class="work-card__number">04</p>
           <div class="work-card__meta">
-            <span class="tag tag--coral">Creative Tech</span>
-            <span class="tag">AI Tools</span>
-            <span class="tag">Rapid Iteration</span>
+            <span class="tag">D2C</span>
+            <span class="tag">UX Design</span>
+            <span class="tag">UX Research</span>
+            <span class="tag">Mixed-Methods</span>
           </div>
-          <h3 class="work-card__title">Zero to Prototype</h3>
-          <p class="work-card__desc">Developed an AI-assisted rapid prototyping workflow that compresses the brief-to-validated-concept cycle from weeks to under 48 hours.</p>
+          <h3 class="work-card__title">Bringing Renters Insurance into the Digital Age</h3>
+          <p class="work-card__desc">Designing Chubb's first D2C renters insurance platform — a fully digital, mobile-first experience that removed the agent from the equation and met younger customers where they are.</p>
           <span class="work-card__cta">View Case Study →</span>
         </div>
       </a>
 
-      <a href="case-study-5.html" class="work-card work-card--wide fade-section">
+      <a href="case-study-05.html" class="work-card fade-section">
         <div class="work-card__image">
-          <div class="work-card__placeholder" style="--hue: 200"></div>
+          <img src="img/cs4-hero.png" alt="Protect What You Collect — luxury jewelry and watch insurance mobile screens">
         </div>
         <div class="work-card__content">
           <p class="work-card__number">05</p>
           <div class="work-card__meta">
-            <span class="tag">Design Leadership</span>
-            <span class="tag">Global</span>
-            <span class="tag">Strategy</span>
+            <span class="tag">UX Design</span>
+            <span class="tag">Consumer Portal</span>
+            <span class="tag">Service Design</span>
+            <span class="tag">Blueprint Design</span>
           </div>
-          <h3 class="work-card__title">The Coherence Project</h3>
-          <p class="work-card__desc">A global design consistency initiative spanning North America and international markets. Unified design language with regional flexibility — adoption up 65% across partner teams.</p>
+          <h3 class="work-card__title">Protect What You Collect</h3>
+          <p class="work-card__desc">Designed Chubb's first digital self-service portal for Valuable Articles Coverage, taking it from a greenfield brief to a live product. Quote, bind, pay, and manage jewelry and watch coverage without an agent call.</p>
+          <span class="work-card__cta">View Case Study →</span>
+        </div>
+      </a>
+
+<a href="case-study-06.html" class="work-card work-card--wide fade-section">
+        <div class="work-card__image">
+          <img src="img/cs5-ds-update.jpg" alt="From Spoke to Suite — Cyber Central after design system migration">
+        </div>
+        <div class="work-card__content">
+          <p class="work-card__number">06</p>
+          <div class="work-card__meta">
+            <span class="tag">UX Design</span>
+            <span class="tag">Design Systems</span>
+            <span class="tag">Agent Experience</span>
+          </div>
+          <h3 class="work-card__title">From Spoke to Suite</h3>
+          <p class="work-card__desc">Cyber insurance quoting lived on its own island. I migrated the platform to Chubb's design system, a first for the company, and helped consolidate it into Marketplace.</p>
           <span class="work-card__cta">View Case Study →</span>
         </div>
       </a>
 
     </div>
   </div>
+
 
   <footer class="footer">
     <div class="container footer__inner">
@@ -135,7 +146,7 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <span class="footer__copy">© 2025</span>
+      <span class="footer__copy">© 2026</span>
     </div>
   </footer>
 

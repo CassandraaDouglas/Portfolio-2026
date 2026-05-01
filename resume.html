@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
 </head>
 <body>
 
@@ -24,39 +25,41 @@
         <li><a href="resume.html" class="nav__link">Resume</a></li>
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
     </div>
   </nav>
 
   <div class="resume-page">
     <div class="container">
 
-      <div class="resume-header">
+      <div class="resume-header fade-section">
         <div class="resume-header__left">
           <h1>Cassandra Douglas</h1>
           <p>UX Designer &amp; Creative Technologist</p>
         </div>
         <div class="resume-header__right" id="resumeHeaderRight">
-          <button class="btn btn--ghost resume-dl-btn" id="printResume">
+          <a href="cassandra-douglas-resume.pdf" download class="btn btn--ghost resume-dl-btn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 15V3M6 9l6 6 6-6"/>
               <path d="M3 17v2a2 2 0 002 2h14a2 2 0 002-2v-2"/>
             </svg>
             Download PDF
-          </button>
+          </a>
         </div>
       </div>
 
       <div class="resume-body">
 
         <!-- SIDEBAR -->
-        <aside class="resume-sidebar">
+        <aside class="resume-sidebar fade-section">
 
           <div class="resume-block">
             <p class="resume-block__title">Contact</p>
             <div class="resume-skill-list">
               <span class="resume-skill">ux.ui@cassandraadouglas.com</span>
-              <span class="resume-skill">linkedin.com/in/cassandradouglas</span>
-              <span class="resume-skill">cassandradouglas.com</span>
+              <span class="resume-skill">linkedin.com/in/cassdouglas</span>
             </div>
           </div>
 
@@ -80,12 +83,12 @@
             <p class="resume-block__title">Tools</p>
             <div class="resume-skill-list">
               <span class="resume-skill">Figma &amp; FigJam</span>
-              <span class="resume-skill">Framer</span>
               <span class="resume-skill">Miro</span>
               <span class="resume-skill">Storybook</span>
               <span class="resume-skill">Zeroheight</span>
               <span class="resume-skill">Claude, Cursor</span>
-              <span class="resume-skill">UserZoom / Maze</span>
+              <span class="resume-skill">UserZoom</span>
+              <span class="resume-skill">Surge, Vercel</span>
               <span class="resume-skill">Confluence &amp; Jira</span>
             </div>
           </div>
@@ -93,9 +96,37 @@
           <div class="resume-block">
             <p class="resume-block__title">Education</p>
             <div class="resume-skill-list">
-              <span class="resume-skill" style="font-weight: 600; color: var(--ink);">B.S. [Field of Study]</span>
-              <span class="resume-skill">[University Name]</span>
-              <span class="resume-skill">[Graduation Year]</span>
+              <span class="resume-skill" style="font-weight: 600; color: var(--ink);">B.S. Human Computer Interaction</span>
+              <span class="resume-skill">NJIT Ying Wu College of Computing</span>
+              <span class="resume-skill">2021 – 2023</span>
+              <span class="resume-skill" style="font-weight: 600; color: var(--ink); margin-top: 8px; display: block;">Certificate, UX/UI Design</span>
+              <span class="resume-skill">Thinkful</span>
+              <span class="resume-skill">Jan – May 2022</span>
+              <span class="resume-skill" style="font-weight: 600; color: var(--ink); margin-top: 8px; display: block;">A.S. Digital Communication &amp; Media</span>
+              <span class="resume-skill">County College of Morris</span>
+              <span class="resume-skill">2019 – 2021</span>
+            </div>
+          </div>
+
+          <div class="resume-block">
+            <p class="resume-block__title">Certifications</p>
+            <div class="resume-skill-list">
+              <span class="resume-skill" style="font-weight: 600; color: var(--ink);">NN/g Certificate in User Experience</span>
+              <span class="resume-skill">Specialty: Interaction Design</span>
+              <span class="resume-skill">UXC# 1084270 · Awarded 2024</span>
+              <div class="resume-cert-courses">
+                <span class="resume-skill" style="font-weight: 600; color: var(--ink); margin-top: 0.5rem; display:block;">Courses</span>
+                <span class="resume-skill">The Human Mind and Usability</span>
+                <span class="resume-skill">Effective Ideation Techniques for UX Design</span>
+                <span class="resume-skill">Design Tradeoffs and UX Decision-Making</span>
+                <span class="resume-skill">Practical AI for UX Professionals</span>
+                <span class="resume-skill">Analytics and User Experience</span>
+                <span class="resume-skill">Measuring UX and ROI</span>
+                <span class="resume-skill">Storytelling to Present UX Work</span>
+                <span class="resume-skill">UX Roadmaps</span>
+                <span class="resume-skill">Information Architecture</span>
+                <span class="resume-skill">Designing Complex Apps for Specialized Domains</span>
+              </div>
             </div>
           </div>
 
@@ -111,7 +142,7 @@
         </aside>
 
         <!-- MAIN CONTENT -->
-        <main class="resume-main">
+        <main class="resume-main fade-section">
 
           <div class="resume-main-block">
             <p class="resume-main-block__title">Experience</p>
@@ -121,7 +152,7 @@
                 <h3 class="resume-job__title">Senior UX Designer, Design Systems</h3>
                 <span class="resume-job__date">Oct 2022 – Present</span>
               </div>
-              <p class="resume-job__company">Chubb — Global Insurance</p>
+              <p class="resume-job__company">Chubb, Global Insurance</p>
               <p class="resume-job__desc">
                 Joined Chubb's Agent Experience and Product Quoting squads before transitioning
                 to the Design Systems team, where I now lead Digital Consumer initiatives across
@@ -134,7 +165,7 @@
                 <li>Partner with product, engineering, and brand teams across time zones to ensure design coherence and accelerate delivery speed by 40%</li>
                 <li>Facilitate design system governance, contribution workflows, and onboarding standards for partner teams</li>
                 <li>Completed Chubb's Aspiring Management Program; led multiple co-op hiring cycles and actively mentored design co-ops through real-world constraints</li>
-                <li>Integrate AI-assisted tooling — Claude, Cursor, Framer — to prototype and iterate 3–4× faster than traditional design workflows</li>
+                <li>Integrate AI-assisted tooling including Claude and Cursor to prototype and iterate 3–4× faster than traditional design workflows</li>
               </ul>
             </div>
           </div>
@@ -144,89 +175,72 @@
 
             <div class="resume-project">
               <div class="resume-project__header">
-                <h4 class="resume-project__title">Quoting at the Speed of Trust</h4>
-                <span class="tag">2023</span>
+                <h4 class="resume-project__title">From Manual Mapping to Guided Configuration</h4>
+                <span class="resume-job__date">2026</span>
               </div>
-              <p class="resume-project__desc">
-                Led end-to-end redesign of agent-facing insurance product quoting flows. Conducted
-                shadowing sessions, contextual inquiry, and iterative usability testing to streamline
-                a 12-step process into a 4-step adaptive flow — reducing quote completion time by 40%
-                and improving agent satisfaction scores by 32%.
-              </p>
-              <div class="resume-project__tags">
-                <span class="tag">UX Research</span>
-                <span class="tag">B2B</span>
-                <span class="tag">Usability Testing</span>
-              </div>
+              <p class="resume-project__desc">Redesigned the API Connect ingestion onboarding experience for Chubb's internal data platform, introducing an AI-assisted expression builder to automate field matching across pipelines.</p>
+              <ul class="resume-job__bullets">
+                <li>Conducted discovery research with data engineers and platform teams to map workflow friction and define the information architecture for a complex, multi-step onboarding experience</li>
+                <li>Designed interaction patterns for an AI-assisted expression builder with no internal UX precedent, balancing technical complexity with usability for a specialized-domain user base</li>
+                <li>Produced high-fidelity Figma prototypes and deployed a live Surge prototype in 8 weeks, enabling stakeholder alignment and early usability validation without engineering involvement</li>
+                <li>Partnered cross-functionally with engineering and product to establish scalable interaction patterns that reduce manual configuration effort and errors triggered by schema changes</li>
+              </ul>
             </div>
 
             <div class="resume-project">
               <div class="resume-project__header">
-                <h4 class="resume-project__title">The Living Design System</h4>
-                <span class="tag">2023–2024</span>
+                <h4 class="resume-project__title">Chubb Everyday: Agentic Prototype</h4>
+                <span class="resume-job__date">2025</span>
               </div>
-              <p class="resume-project__desc">
-                Drove design system evolution strategy including token architecture, component audits,
-                living documentation, and team adoption playbooks. Achieved 3× faster component
-                adoption across 12 product teams and 65% reduction in design-dev handoff friction.
-              </p>
-              <div class="resume-project__tags">
-                <span class="tag">Design Systems</span>
-                <span class="tag">Figma</span>
-                <span class="tag">Storybook</span>
-                <span class="tag">Zeroheight</span>
-              </div>
+              <p class="resume-project__desc">Designed and shipped a unified D2C insurance platform POC in 1 week using a fully agentic design-to-code workflow, currently under stakeholder review for full production investment.</p>
+              <ul class="resume-job__bullets">
+                <li>Defined UX strategy and end-to-end user flows for a multi-product D2C platform, mapping customer journeys from awareness through quote, bind, and policy management</li>
+                <li>Built a production-quality prototype using Claude Code, Figma MCP, and the Chubb Design System MCP, compressing a typical 6-week design sprint into under 7 days</li>
+                <li>Applied the existing Chubb design system as the component foundation, ensuring brand consistency and near-zero design-to-development handoff friction</li>
+                <li>Demonstrated AI-assisted rapid prototyping as a scalable methodology, with the live site shipped to Surge hosting in under a day</li>
+              </ul>
             </div>
 
             <div class="resume-project">
               <div class="resume-project__header">
-                <h4 class="resume-project__title">Mapping the Invisible</h4>
-                <span class="tag">2024</span>
+                <h4 class="resume-project__title">Bringing Renters Insurance into the Digital Age</h4>
+                <span class="resume-job__date">2024–2025</span>
               </div>
-              <p class="resume-project__desc">
-                Designed and facilitated a service blueprinting initiative aligning 6 cross-functional
-                teams across 3 targeted workshops. Surfaced critical process friction and created a
-                shared decision framework that reduced cross-team dependency blockers by 55%.
-              </p>
-              <div class="resume-project__tags">
-                <span class="tag">Service Design</span>
-                <span class="tag">Facilitation</span>
-                <span class="tag">Miro</span>
-              </div>
+              <p class="resume-project__desc">Led UX for Chubb's first D2C renters insurance platform: mobile-first, agent-free, and purpose-built to reach a younger consumer segment through a fully digital purchase experience.</p>
+              <ul class="resume-job__bullets">
+                <li>Led end-to-end user research using mixed methods including contextual inquiry, moderated usability testing, and A/B testing across key purchase and policy management flows</li>
+                <li>Designed mobile-first, responsive interfaces enabling customers to quote, bind, and manage coverage without agent assistance, reducing friction in the acquisition funnel</li>
+                <li>A/B usability testing produced a 94% task success rate against a 33% baseline, providing clear evidence to align stakeholders on core interaction decisions</li>
+                <li>Collaborated across product, engineering, actuarial, and legal teams to ensure regulatory compliance while preserving a streamlined, user-centered experience</li>
+              </ul>
             </div>
 
             <div class="resume-project">
               <div class="resume-project__header">
-                <h4 class="resume-project__title">Zero to Prototype</h4>
-                <span class="tag">2024–2025</span>
+                <h4 class="resume-project__title">Protect What You Collect</h4>
+                <span class="resume-job__date">2024–2025</span>
               </div>
-              <p class="resume-project__desc">
-                Developed an AI-assisted rapid prototyping methodology using Claude, Cursor, and
-                Framer. Compressed the brief-to-validated-concept cycle from 2–3 weeks to under
-                48 hours, enabling faster stakeholder alignment and earlier usability validation.
-              </p>
-              <div class="resume-project__tags">
-                <span class="tag">AI Tools</span>
-                <span class="tag">Framer</span>
-                <span class="tag">Rapid Prototyping</span>
-              </div>
+              <p class="resume-project__desc">Led greenfield UX from brief to launch for Chubb's first digital self-service portal for Valuable Articles Coverage, enabling customers to quote, bind, pay, and manage jewelry and watch policies without ever calling an agent.</p>
+              <ul class="resume-job__bullets">
+                <li>Defined information architecture, user flows, and interaction design for a product category with no existing digital self-service precedent at Chubb</li>
+                <li>Applied service blueprinting to align cross-functional stakeholders across underwriting, operations, and digital on front-stage and back-stage process dependencies</li>
+                <li>Conducted iterative usability testing throughout the design process to validate flows and refine the experience for a high-net-worth consumer audience</li>
+                <li>Delivered a live product that expanded Chubb's digital self-service offering into a new consumer segment, from greenfield brief to shipped in under a year</li>
+              </ul>
             </div>
 
             <div class="resume-project">
               <div class="resume-project__header">
-                <h4 class="resume-project__title">The Coherence Project</h4>
-                <span class="tag">2025</span>
+                <h4 class="resume-project__title">From Spoke to Suite</h4>
+                <span class="resume-job__date">2022–2023</span>
               </div>
-              <p class="resume-project__desc">
-                Led a global design consistency initiative spanning North America and international
-                markets. Established a unified design language with regional flexibility, increasing
-                design system adoption by 65% globally and accelerating cross-team delivery by 40%.
-              </p>
-              <div class="resume-project__tags">
-                <span class="tag">Design Leadership</span>
-                <span class="tag">Global</span>
-                <span class="tag">Strategy</span>
-              </div>
+              <p class="resume-project__desc">Executed Chubb's first design system migration, moving the Cyber insurance quoting platform onto the company-wide design system and consolidating it into Marketplace to unify the agent experience.</p>
+              <ul class="resume-job__bullets">
+                <li>Audited existing components, documented design decisions, and produced a migration guide that became the internal standard for subsequent design system adoption across product teams</li>
+                <li>Identified and resolved component gaps between the legacy product and the design system, working with design system leads and front-end engineers to maintain design-to-code fidelity</li>
+                <li>Helped consolidate Cyber into Chubb Marketplace, reducing cross-product inconsistency and improving the end-to-end agent experience across quoting workflows</li>
+                <li>Set the precedent and adoption playbook for design system migration at Chubb, directly enabling faster onboarding for subsequent product teams</li>
+              </ul>
             </div>
 
           </div>
@@ -245,7 +259,7 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <span class="footer__copy">© 2025</span>
+      <span class="footer__copy">© 2026</span>
     </div>
   </footer>
 

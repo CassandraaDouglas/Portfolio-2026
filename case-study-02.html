@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Title — Cassandra Douglas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
+</head>
+<body>
+
+  <script>if(!sessionStorage.getItem('cd_auth')){window.location.replace('password.html');}</script>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">CD</a>
+      <ul class="nav__links">
+        <li><a href="work.html" class="nav__link">Work</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cs-hero container">
+    <a href="work.html" class="cs-hero__back">← Back to Work</a>
+    <div class="cs-hero__tags">
+      <span class="tag">Tag One</span>
+      <span class="tag">Tag Two</span>
+      <span class="tag">Tag Three</span>
+    </div>
+    <h1 class="cs-hero__title">Project Title</h1>
+    <p class="cs-hero__desc">
+      One-sentence hook that captures the problem and the outcome.
+    </p>
+    <div class="cs-hero__image">
+      <div class="work-card__placeholder" style="--hue: 160"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <p class="cs-stat__label">Role</p>
+        <p class="cs-stat__value">Role Here</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Timeline</p>
+        <p class="cs-stat__value">Timeline Here</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Tools</p>
+        <p class="cs-stat__value">Tools Here</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Impact</p>
+        <p class="cs-stat__value">Impact Here</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-body container">
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">01 — Context &amp; Challenge</p>
+      <h2 class="cs-section__title">Section title goes here.</h2>
+      <p>
+        Context and challenge body copy goes here. Describe the problem, why it existed,
+        and why it was hard. Lead with the human problem, not the business requirement.
+      </p>
+      <div class="cs-callout">
+        <p>A key quote, insight, or framing statement that captures the core tension of this project.</p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">02 — My Role &amp; Process</p>
+      <h2 class="cs-section__title">Section title goes here.</h2>
+      <p>
+        Describe what you specifically did. Use "I" where you drove the work. Cover research,
+        key decisions, design process, and how you moved from problem to solution.
+      </p>
+      <div class="cs-image-block">
+        <div class="work-card__placeholder" style="--hue: 170"></div>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">03 — What I'd Do Differently</p>
+      <h2 class="cs-section__title">Section title goes here.</h2>
+      <p>
+        Honest reflection on the project. What would you change, do earlier, or approach
+        differently given the chance?
+      </p>
+      <div class="cs-callout">
+        <p>The specific thing you would do differently and why.</p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">04 — Outcomes &amp; Impact</p>
+      <h2 class="cs-section__title">Section title goes here.</h2>
+      <p>
+        Results, metrics, and qualitative wins. Be honest about what worked and what was mixed.
+      </p>
+      <ul>
+        <li>Outcome one</li>
+        <li>Outcome two</li>
+        <li>Outcome three</li>
+      </ul>
+    </div>
+
+    <div class="cs-nav">
+      <a href="case-study-01.html" class="cs-nav__item">
+        <p class="cs-nav__dir">← Previous</p>
+        <p class="cs-nav__title">Project Title</p>
+      </a>
+      <a href="case-study-03.html" class="cs-nav__item cs-nav__item--next">
+        <p class="cs-nav__dir">Next →</p>
+        <p class="cs-nav__title">Chubb Everyday: Agentic Prototype</p>
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Cassandra Douglas</span>
+      <nav class="footer__nav">
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer__copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

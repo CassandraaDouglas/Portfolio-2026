@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cassandra Douglas — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sidebar-bg:   #EDE8DC;
+      --sidebar-dark: #2C2820;
+      --sidebar-mid:  #5C5040;
+      --sidebar-sub:  #8A7A65;
+      --sidebar-pill: #D9D0C0;
+      --accent:       #5B3DF5;
+      --accent-light: #EEE9FF;
+      --ink:          #1A1A24;
+      --ink-mid:      #3A3A4C;
+      --ink-muted:    #606070;
+      --border:       #E4E0D8;
+      --rule:         #D0CABC;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      color: var(--ink);
+      background: #D8D2C8;
+      line-height: 1.35;
+    }
+
+    /* ── Page shell ── */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 170pt 1fr;
+      background: #fff;
+    }
+
+    /* ════════════════════════════════
+       SIDEBAR
+    ════════════════════════════════ */
+    .sb {
+      background: var(--sidebar-bg);
+      padding: 18pt 14pt 16pt;
+      display: flex;
+      flex-direction: column;
+      gap: 11pt;
+    }
+
+    /* Name block */
+    .sb-name {
+      border-bottom: 1.5pt solid var(--rule);
+      padding-bottom: 10pt;
+    }
+
+    .sb-name__first {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18pt;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: var(--sidebar-dark);
+    }
+
+    .sb-name__last {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18pt;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--accent);
+    }
+
+    .sb-name__title {
+      margin-top: 5pt;
+      font-size: 7pt;
+      font-weight: 500;
+      color: var(--sidebar-mid);
+      line-height: 1.35;
+    }
+
+    /* Section label */
+    .sb-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 6pt;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--sidebar-mid);
+      margin-bottom: 5pt;
+      display: block;
+    }
+
+    /* Contact */
+    .sb-contact { display: flex; flex-direction: column; gap: 4pt; }
+
+    .sb-contact__row {}
+    .sb-contact__key {
+      font-weight: 700;
+      font-size: 6.5pt;
+      color: var(--sidebar-dark);
+      display: block;
+      margin-bottom: 1pt;
+    }
+    .sb-contact__val {
+      font-size: 7pt;
+      color: var(--sidebar-mid);
+      word-break: break-all;
+    }
+
+    /* Skills list */
+    .sb-pills { display: flex; flex-direction: column; gap: 2.5pt; }
+
+    .sb-pill {
+      font-size: 7pt;
+      color: var(--sidebar-dark);
+      line-height: 1.35;
+    }
+
+    /* Cert block */
+    .sb-cert { display: flex; flex-direction: column; gap: 2pt; }
+    .sb-cert__name { font-weight: 700; font-size: 7pt; color: var(--sidebar-dark); }
+    .sb-cert__spec { font-size: 6.5pt; color: var(--sidebar-mid); }
+    .sb-cert__id   { font-family: 'Space Mono', monospace; font-size: 6pt; color: var(--sidebar-sub); }
+
+    /* Education */
+    .sb-edu { display: flex; flex-direction: column; gap: 1.5pt; }
+    .sb-edu__degree { font-weight: 700; font-size: 7pt; color: var(--sidebar-dark); }
+    .sb-edu__school { font-size: 6.5pt; color: var(--sidebar-mid); }
+    .sb-edu__year   { font-size: 6pt; color: var(--sidebar-sub); }
+
+    /* Leadership plain list */
+    .sb-list { display: flex; flex-direction: column; gap: 3pt; }
+    .sb-list__item { font-size: 7pt; color: var(--sidebar-mid); line-height: 1.35; }
+
+    /* ════════════════════════════════
+       MAIN
+    ════════════════════════════════ */
+    .mn {
+      padding: 18pt 20pt 16pt;
+      display: flex;
+      flex-direction: column;
+      gap: 10pt;
+    }
+
+    /* Section */
+    .mn-section {}
+
+    .mn-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9.5pt;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      color: var(--accent);
+      margin-bottom: 3pt;
+      padding-bottom: 3pt;
+      border-bottom: 1.5pt solid var(--accent-light);
+    }
+
+    /* Experience row */
+    .exp { display: grid; grid-template-columns: 48pt 1fr; gap: 8pt; margin-top: 6pt; }
+    .exp:first-of-type { margin-top: 5pt; }
+
+    .exp__date {
+      font-family: 'Space Mono', monospace;
+      font-size: 6.5pt;
+      color: var(--ink-muted);
+      line-height: 1.35;
+      padding-top: 1pt;
+    }
+
+    .exp__content {}
+
+    .exp__title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 1pt;
+    }
+
+    .exp__company {
+      font-size: 7pt;
+      color: var(--ink-muted);
+      font-style: italic;
+      margin-bottom: 4pt;
+    }
+
+    .exp__desc {
+      font-size: 7.5pt;
+      color: var(--ink-mid);
+      line-height: 1.4;
+      margin-bottom: 4pt;
+    }
+
+    /* Project rows */
+    .proj { display: grid; grid-template-columns: 48pt 1fr; gap: 8pt; margin-top: 5pt; }
+    .proj:first-of-type { margin-top: 5pt; }
+
+    .proj__date {
+      font-family: 'Space Mono', monospace;
+      font-size: 6.5pt;
+      color: var(--ink-muted);
+      line-height: 1.35;
+      padding-top: 1pt;
+    }
+
+    .proj__title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2pt;
+    }
+
+    .proj__desc {
+      font-size: 7pt;
+      color: var(--ink-muted);
+      line-height: 1.35;
+      margin-bottom: 3pt;
+      font-style: italic;
+    }
+
+    /* Bullets */
+    .bullets { list-style: none; }
+    .bullets li {
+      font-size: 7pt;
+      color: var(--ink-mid);
+      line-height: 1.35;
+      padding-left: 9pt;
+      position: relative;
+      margin-bottom: 1.5pt;
+    }
+    .bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 8pt;
+      line-height: 1.45;
+    }
+
+    /* ── Print ── */
+    @media print {
+      @page { size: letter; margin: 0; }
+      body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .page { width: 100%; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ═══ SIDEBAR ═══ -->
+  <aside class="sb">
+
+    <div class="sb-name">
+      <div class="sb-name__first">Cassandra</div>
+      <div class="sb-name__last">Douglas</div>
+      <div class="sb-name__title">UX Designer &amp; Creative Technologist<br>9+ Years Experience</div>
+    </div>
+
+    <div>
+      <span class="sb-label">Contact</span>
+      <div class="sb-contact">
+        <div class="sb-contact__row">
+          <span class="sb-contact__key">Phone</span>
+          <span class="sb-contact__val">973-572-0882</span>
+        </div>
+        <div class="sb-contact__row">
+          <span class="sb-contact__key">E-mail</span>
+          <span class="sb-contact__val">ux.ui@cassandraadouglas.com</span>
+        </div>
+        <div class="sb-contact__row">
+          <span class="sb-contact__key">LinkedIn</span>
+          <span class="sb-contact__val">linkedin.com/in/cassdouglas</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <span class="sb-label">Core Skills</span>
+      <div class="sb-pills">
+        <span class="sb-pill">UX Research</span>
+        <span class="sb-pill">Interaction Design</span>
+        <span class="sb-pill">Systems Design</span>
+        <span class="sb-pill">Design Systems</span>
+        <span class="sb-pill">Rapid Prototyping</span>
+        <span class="sb-pill">Service Blueprinting</span>
+        <span class="sb-pill">Journey Mapping</span>
+        <span class="sb-pill">AI-Assisted Design</span>
+        <span class="sb-pill">Workshop Facilitation</span>
+        <span class="sb-pill">Data Visualization</span>
+        <span class="sb-pill">Stakeholder Alignment</span>
+      </div>
+    </div>
+
+    <div>
+      <span class="sb-label">Tools</span>
+      <div class="sb-pills">
+        <span class="sb-pill">Figma &amp; FigJam</span>
+        <span class="sb-pill">Miro</span>
+        <span class="sb-pill">Storybook</span>
+        <span class="sb-pill">Zeroheight</span>
+        <span class="sb-pill">Claude</span>
+        <span class="sb-pill">Cursor</span>
+        <span class="sb-pill">UserZoom</span>
+        <span class="sb-pill">Surge</span>
+        <span class="sb-pill">Vercel</span>
+        <span class="sb-pill">Confluence</span>
+        <span class="sb-pill">Jira</span>
+      </div>
+    </div>
+
+    <div>
+      <span class="sb-label">Certifications</span>
+      <div class="sb-cert">
+        <span class="sb-cert__name">NN/g Certificate in UX</span>
+        <span class="sb-cert__spec">Specialty: Interaction Design</span>
+        <span class="sb-cert__id">UXC# 1084270 · Awarded 2024</span>
+      </div>
+    </div>
+
+    <div>
+      <span class="sb-label">Education</span>
+      <div class="sb-edu" style="margin-bottom: 7pt;">
+        <span class="sb-edu__degree">B.S. Human Computer Interaction</span>
+        <span class="sb-edu__school">NJIT Ying Wu College of Computing</span>
+        <span class="sb-edu__year">2021 – 2023</span>
+      </div>
+      <div class="sb-edu" style="margin-bottom: 7pt;">
+        <span class="sb-edu__degree">Certificate, UX/UI Design</span>
+        <span class="sb-edu__school">Thinkful</span>
+        <span class="sb-edu__year">Jan 2022 – May 2022</span>
+      </div>
+      <div class="sb-edu">
+        <span class="sb-edu__degree">A.S. Digital Communication &amp; Media</span>
+        <span class="sb-edu__school">County College of Morris</span>
+        <span class="sb-edu__year">2019 – 2021</span>
+      </div>
+    </div>
+
+    <div>
+      <span class="sb-label">Leadership</span>
+      <div class="sb-list">
+        <span class="sb-list__item">Chubb Aspiring Management Program</span>
+        <span class="sb-list__item">Co-op Interview Lead</span>
+        <span class="sb-list__item">Design Co-op Mentor</span>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ═══ MAIN ═══ -->
+  <main class="mn">
+
+    <!-- EXPERIENCE -->
+    <section class="mn-section">
+      <p class="mn-label">Work History</p>
+
+      <div class="exp">
+        <div class="exp__date">Oct 2022 –<br>Present</div>
+        <div class="exp__content">
+          <p class="exp__title">Senior UX Designer, Design Systems</p>
+          <p class="exp__company">Chubb, Global Insurance</p>
+          <p class="exp__desc">Joined Chubb's Agent Experience and Product Quoting squads before transitioning to the Design Systems team, where I now lead Digital Consumer initiatives across Global and North America.</p>
+          <ul class="bullets">
+            <li>Lead design system evolution across Global and North American digital consumer products, driving 65% increase in cross-team adoption</li>
+            <li>Develop and maintain scalable component libraries, token architecture, and living documentation</li>
+            <li>Partner with product, engineering, and brand teams to ensure design coherence and accelerate delivery speed by 40%</li>
+            <li>Facilitate design system governance, contribution workflows, and onboarding standards</li>
+            <li>Completed Chubb's Aspiring Management Program; led co-op hiring cycles and mentored design co-ops</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="mn-section">
+      <p class="mn-label">Key Projects</p>
+
+      <div class="proj">
+        <div class="proj__date">2026</div>
+        <div>
+          <p class="proj__title">From Manual Mapping to Guided Configuration</p>
+          <p class="proj__desc">Redesigned Chubb's API Connect ingestion onboarding experience, introducing an AI-assisted expression builder that automates field matching and eliminates rework caused by schema changes.</p>
+          <ul class="bullets">
+            <li>Conducted discovery research with data engineers to map workflow friction and define the information architecture for a complex onboarding experience</li>
+            <li>Designed an AI-assisted expression builder with no internal UX precedent, balancing technical complexity with usability for a specialized-domain user base</li>
+            <li>Deployed a live Surge prototype in 8 weeks, enabling stakeholder alignment without engineering involvement</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj__date">2025</div>
+        <div>
+          <p class="proj__title">Chubb Everyday: Agentic Prototype</p>
+          <p class="proj__desc">Designed and shipped a unified D2C insurance platform POC in 1 week using a fully agentic workflow, currently under stakeholder review for full production investment.</p>
+          <ul class="bullets">
+            <li>Defined UX strategy and user flows for a multi-product D2C platform covering the full customer journey from awareness through policy management</li>
+            <li>Built a production-quality prototype using Claude Code, Figma MCP, and the Chubb Design System MCP, compressing a 6-week sprint into under 7 days</li>
+            <li>Live site shipped to Surge in under a day; currently in consideration for full production investment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj__date">2024–2025</div>
+        <div>
+          <p class="proj__title">Bringing Renters Insurance into the Digital Age</p>
+          <p class="proj__desc">Led UX for Chubb's first D2C renters insurance platform — mobile-first, agent-free, and built for a younger customer segment through a fully digital purchase experience.</p>
+          <ul class="bullets">
+            <li>Led mixed-methods UX research including contextual inquiry, moderated usability testing, and A/B testing across key purchase and policy management flows</li>
+            <li>Designed mobile-first interfaces enabling customers to quote, bind, and manage coverage without agent assistance</li>
+            <li>A/B testing produced a 94% task success rate against a 33% baseline, aligning stakeholders on core interaction decisions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj__date">2024–2025</div>
+        <div>
+          <p class="proj__title">Protect What You Collect</p>
+          <p class="proj__desc">Took Chubb's Valuable Articles Coverage from a greenfield brief to a live self-service portal, enabling customers to quote, bind, pay, and manage jewelry and watch policies without an agent.</p>
+          <ul class="bullets">
+            <li>Defined information architecture, user flows, and interaction design with no existing digital self-service precedent at Chubb</li>
+            <li>Applied service blueprinting to align stakeholders across underwriting, operations, and digital on front-stage and back-stage processes</li>
+            <li>Took the product from greenfield brief to live in under a year, expanding Chubb's self-service offering into a new segment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="proj">
+        <div class="proj__date">2022–2023</div>
+        <div>
+          <p class="proj__title">From Spoke to Suite</p>
+          <p class="proj__desc">Executed Chubb's first design system migration, moving Cyber insurance quoting onto the company DS and consolidating it into Marketplace to unify the agent experience.</p>
+          <ul class="bullets">
+            <li>Audited existing components, documented decisions, and produced a migration guide that became the internal standard for DS adoption at Chubb</li>
+            <li>Resolved component gaps between the legacy product and the design system, maintaining design-to-code fidelity throughout</li>
+            <li>Set the precedent and adoption playbook for DS migration at Chubb, enabling faster onboarding for subsequent product teams</li>
+          </ul>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+</div>
+</body>
+</html>

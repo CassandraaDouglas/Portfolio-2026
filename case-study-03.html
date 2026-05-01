@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chubb Everyday: Agentic Prototype — Cassandra Douglas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
+</head>
+<body>
+
+  <script>if(!sessionStorage.getItem('cd_auth')){window.location.replace('password.html');}</script>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">CD</a>
+      <ul class="nav__links">
+        <li><a href="work.html" class="nav__link">Work</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cs-hero container">
+    <a href="work.html" class="cs-hero__back">← Back to Work</a>
+    <div class="cs-hero__tags">
+      <span class="tag">D2C</span>
+      <span class="tag">Agentic Prototyping</span>
+      <span class="tag">Design Systems</span>
+    </div>
+    <h1 class="cs-hero__title">Chubb Everyday: Agentic Prototype</h1>
+    <p class="cs-hero__desc">
+      Building a proof-of-concept for Chubb Everyday, a unified D2C insurance platform,
+      using an entirely agentic workflow from first commit to deployed site in 1 week.
+    </p>
+    <div class="cs-hero__image">
+      <video autoplay loop muted playsinline style="width:100%;border-radius:12px;display:block;">
+        <source src="img/chubb-everyday.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <p class="cs-stat__label">Role</p>
+        <p class="cs-stat__value">Lead UX Designer</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Timeline</p>
+        <p class="cs-stat__value">1 week, 2025</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Tools</p>
+        <p class="cs-stat__value">Claude Code · Design System MCP · Surge</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Status</p>
+        <p class="cs-stat__value">POC deployed</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-body container">
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">01 — Context &amp; Challenge</p>
+      <h2 class="cs-section__title">Every D2C product lived somewhere different. Nothing lived together.</h2>
+      <p>
+        Chubb's direct-to-consumer products had grown over time without a shared home.
+        Each product existed in its own silo, with separate experiences, separate entry points,
+        and no unified identity for customers navigating what Chubb had to offer directly.
+      </p>
+      <p>
+        The vision was Chubb Everyday: a single platform that brought all D2C insurance
+        products together under one roof, with a consistent experience and a clear value
+        proposition. The challenge wasn't just design. It was demonstrating that the concept
+        was viable, fast enough to make the case before the idea lost momentum.
+      </p>
+      <div class="cs-callout">
+        <p>The real question wasn't whether the idea was good. It was whether I could show it
+        compellingly enough, quickly enough, to move from conversation to consideration.</p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">02 — My Role &amp; Process</p>
+      <h2 class="cs-section__title">I didn't build a deck. I built the thing.</h2>
+      <p>
+        Rather than producing a static presentation or a clickable Figma prototype, I used
+        a fully agentic workflow to build and deploy a functional proof-of-concept. The
+        entire project, from design through development and deployment, ran through Claude Code,
+        with Chubb's own Design System MCP connected directly into the workflow.
+      </p>
+      <p>
+        This meant the POC wasn't approximating the design system. It was built with it.
+        Colors, typography, spacing, and component behavior were all sourced from the real tokens
+        and patterns Chubb uses in production. The result felt like a real product because,
+        structurally, it was built like one.
+      </p>
+      <p>
+        The POC covers the core D2C journeys: product discovery, quoting flows, and the
+        claims process. These are the three moments that matter most to a customer in their relationship
+        with an insurer. Each flow drew on patterns and decisions from my previous D2C work
+        at Chubb, synthesized into a single coherent experience for the first time.
+      </p>
+      <p>
+        I included a theme switcher (accessible via a gear icon) to demonstrate the design
+        system's flexibility across Chubb's color palette. It shows stakeholders how the
+        experience could adapt across product lines without breaking the underlying structure.
+        Once the build was complete, I deployed to Surge within a day.
+      </p>
+      <div class="cs-image-block">
+        <video autoplay loop muted playsinline style="width:100%;border-radius:12px;display:block;">
+          <source src="img/chubb-everyday.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">03 — What I'd Do Differently</p>
+      <h2 class="cs-section__title">What's scoped out is the next conversation, not a flaw.</h2>
+      <p>
+        This was a proof-of-concept by design, intentionally scoped to demonstrate
+        viability, not production completeness. The happy path works. What it doesn't
+        yet have is the depth of edge case coverage a live product would require.
+      </p>
+      <div class="cs-callout">
+        <p>
+          To take this to production, I'd want dedicated refinement calls with the product
+          team to pressure-test the flows, and significantly more time to build out the
+          edge cases: error states, accessibility corner cases, and cross-device behavior
+          that a real user will eventually find.
+        </p>
+      </div>
+      <p>
+        The POC proved the concept. The next phase is proving the details. That's a
+        different kind of work, and I'm ready for it.
+      </p>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">04 — Outcomes &amp; Impact</p>
+      <h2 class="cs-section__title">A deployed POC, a new workflow, and a bet on what's next.</h2>
+      <p>
+        Chubb Everyday went from concept to deployed proof-of-concept in 1 week, with
+        the live site shipped to Surge in under a day.
+      </p>
+      <p>
+        Beyond the product itself, this project demonstrated something broader. A designer
+        with the right agentic tools can collapse the design-to-deploy cycle in ways that
+        fundamentally change how early-stage concepts get evaluated. No waiting for engineering
+        bandwidth. No static mockups that require imagination to fill in the gaps. The thing
+        speaks for itself.
+      </p>
+      <ul>
+        <li>Functional POC built and deployed in 1 week</li>
+        <li>Covers full D2C journeys: product discovery, quoting flows, and claims process</li>
+        <li>Built using Chubb's real design system tokens, not approximations</li>
+        <li>Agentic workflow: Claude Code, Design System MCP, and Surge</li>
+      </ul>
+    </div>
+
+    <div class="cs-nav">
+      <a href="case-study-01.html" class="cs-nav__item">
+        <p class="cs-nav__dir">← Previous</p>
+        <p class="cs-nav__title">From Manual Mapping to Guided Configuration</p>
+      </a>
+      <a href="case-study-04.html" class="cs-nav__item cs-nav__item--next">
+        <p class="cs-nav__dir">Next →</p>
+        <p class="cs-nav__title">Bringing Renters Insurance into the Digital Age</p>
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Cassandra Douglas</span>
+      <nav class="footer__nav">
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer__copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

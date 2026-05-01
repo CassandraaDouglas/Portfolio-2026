@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cassandra Douglas — UX Designer & Creative Technologist</title>
-  <meta name="description" content="Cassandra Douglas is a UX designer and creative technologist with 8+ years building design systems, rapid prototypes, and scalable digital experiences.">
+  <meta name="description" content="Cassandra Douglas is a UX designer and creative technologist with 9+ years building design systems, rapid prototypes, and scalable digital experiences.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
 </head>
 <body>
 
@@ -24,6 +25,9 @@
         <li><a href="resume.html" class="nav__link">Resume</a></li>
         <li><a href="contact.html" class="nav__link">Contact</a></li>
       </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
     </div>
   </nav>
 
@@ -40,7 +44,7 @@
         that <em>actually</em> scale.
       </h1>
       <p class="hero__subtitle">
-        8+ years making complex systems legible, and turning ideas into
+        9+ years making complex systems legible, and turning ideas into
         working prototypes before most teams finish their brief.
       </p>
       <div class="hero__actions">
@@ -81,17 +85,17 @@
   </div>
 
   <!-- ABOUT -->
-  <section class="section about fade-section">
+  <section class="section about">
     <div class="container about__inner">
-      <div class="about__left">
+      <div class="about__left fade-section">
         <p class="about__label">About</p>
         <h2 class="about__title">
           I work at the intersection of strategy, systems, and speed.
         </h2>
       </div>
-      <div class="about__right">
+      <div class="about__right fade-section">
         <p>
-          At the core of my practice is systems thinking — the ability to see how people,
+          At the core of my practice is systems thinking: the ability to see how people,
           processes, data, and interfaces interconnect. I use that understanding to design
           solutions that scale, reduce friction, and bring clarity to even the most complex,
           multi-stakeholder problems.
@@ -103,7 +107,7 @@
         </p>
         <div class="about__stats">
           <div class="stat">
-            <span class="stat__number">8+</span>
+            <span class="stat__number">9+</span>
             <span class="stat__label">Years of experience</span>
           </div>
           <div class="stat">
@@ -120,15 +124,15 @@
   </section>
 
   <!-- FEATURED WORK -->
-  <section class="section work-preview fade-section">
+  <section class="section work-preview">
     <div class="container">
-      <div class="section__header">
+      <div class="section__header fade-section">
         <p class="section__label">Selected Work</p>
         <a href="work.html" class="section__link">View all →</a>
       </div>
       <div class="work-grid">
 
-        <a href="case-study-1.html" class="work-card work-card--wide">
+        <a href="case-study-03.html" class="work-card work-card--wide fade-section">
           <div class="work-card__image">
             <div class="work-card__placeholder" style="--hue: 250"></div>
           </div>
@@ -144,7 +148,7 @@
           </div>
         </a>
 
-        <a href="case-study-2.html" class="work-card">
+        <a href="case-study-04.html" class="work-card fade-section">
           <div class="work-card__image">
             <div class="work-card__placeholder" style="--hue: 170"></div>
           </div>
@@ -159,7 +163,7 @@
           </div>
         </a>
 
-        <a href="case-study-4.html" class="work-card">
+        <a href="case-study-05.html" class="work-card fade-section">
           <div class="work-card__image">
             <div class="work-card__placeholder" style="--hue: 20"></div>
           </div>
@@ -169,7 +173,7 @@
               <span class="tag">AI Tools</span>
             </div>
             <h3 class="work-card__title">Zero to Prototype</h3>
-            <p class="work-card__desc">AI-assisted rapid prototyping — from brief to validated concept in under 48 hours.</p>
+            <p class="work-card__desc">AI-assisted rapid prototyping from brief to validated concept in under 48 hours.</p>
             <span class="work-card__cta">View Case Study →</span>
           </div>
         </a>
@@ -199,7 +203,7 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <span class="footer__copy">© 2025</span>
+      <span class="footer__copy">© 2026</span>
     </div>
   </footer>
 

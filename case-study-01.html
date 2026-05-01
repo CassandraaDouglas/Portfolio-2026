@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Manual Mapping to Guided Configuration — Cassandra Douglas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
+</head>
+<body>
+
+  <script>if(!sessionStorage.getItem('cd_auth')){window.location.replace('password.html');}</script>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">CD</a>
+      <ul class="nav__links">
+        <li><a href="work.html" class="nav__link">Work</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cs-hero container">
+    <a href="work.html" class="cs-hero__back">← Back to Work</a>
+    <div class="cs-hero__tags">
+      <span class="tag">Internal Tools</span>
+      <span class="tag">AI-Assisted Design</span>
+      <span class="tag">Data Platform</span>
+    </div>
+    <h1 class="cs-hero__title">From Manual Mapping to Guided Configuration</h1>
+    <p class="cs-hero__desc">
+      Designing Chubb's API Connect ingestion onboarding experience. A unified configuration interface with an AI-assisted expression builder that eliminates the manual effort of resolving field mismatches and rewriting transformation rules with every schema change.
+    </p>
+    <a href="https://api-connect-chubb.surge.sh/" target="_blank" rel="noopener noreferrer" class="cs-hero__link">View Prototype →</a>
+    <div class="cs-hero__image">
+      <img src="img/cs01-hero.png" alt="API Connect ingestion onboarding — new design showing sidebar navigation, multi-field search, and data table with validation status">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <p class="cs-stat__label">Role</p>
+        <p class="cs-stat__value">Lead Designer</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Timeline</p>
+        <p class="cs-stat__value">8 weeks, 2026</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Tools</p>
+        <p class="cs-stat__value">Figma MCP, Claude Code, Surge</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Impact</p>
+        <p class="cs-stat__value">Automated field matching across pipelines</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-body container">
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">01 — Context &amp; Challenge</p>
+      <h2 class="cs-section__title">Three roles. One process. Zero shared visibility.</h2>
+      <p>
+        Chubb's internal API Connect platform handles the ingestion of data from external sources into core systems. It is a critical, high-stakes process touching underwriting, compliance, and operations. The problem wasn't that people didn't know their jobs. It was that the jobs weren't designed to talk to each other.
+      </p>
+      <p>
+        Developers registered and tested ingestion configurations in non-production environments. Team owners reviewed schema mappings and approved production promotions. Global platform admins held governance oversight across everything. Three distinct roles, three different mental models of what the pipeline even looked like. The platform had a single onboarding flow that didn't account for any of them.
+      </p>
+      <p>
+        The real cost showed up at schema change time. When a source system updated its data structure, teams had to manually identify every broken field mapping, rewrite the transformation rules from scratch, and walk the whole approval chain again. Every change was a support ticket waiting to happen.
+      </p>
+      <div class="cs-callout">
+        <p>The problem wasn't complexity. The tool treated every user the same and punished them equally when something changed.</p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">02 — My Role &amp; Process</p>
+      <h2 class="cs-section__title">One interface. Role-aware. AI-assisted where it counts.</h2>
+      <p>
+        I led design for the ingestion onboarding configuration details page. This is the core screen where users define how a data source maps into Chubb's systems. The scope included the full configuration workflow: source schema selection, field mapping, transformation rule definition, and handoff to the approval chain.
+      </p>
+      <p>
+        The highest-friction moment in the existing experience was the expression builder. This is the interface where users defined transformation logic to normalize source fields into target schemas. It required writing rules manually, with no guidance, no validation feedback, and no memory of what had worked before. Developers who knew the platform well moved through it. Everyone else got stuck.
+      </p>
+      <p>
+        I designed an AI-assisted expression builder that surfaces suggested mappings based on field names, data types, and prior configurations. Instead of starting from a blank input, users see ranked suggestions they can accept, modify, or override. The interface explains its reasoning inline rather than buried in documentation, so team owners reviewing mappings can understand what they're approving.
+      </p>
+      <ul>
+        <li>Unified field mapping interface that shows source and target schemas side by side, with match confidence indicators</li>
+        <li>AI-assisted expression builder with suggested transformations, editable inline, with plain-language rationale</li>
+        <li>Role-appropriate views: developers see technical detail, team owners see approval-ready summaries, admins see governance status</li>
+        <li>Schema version tracking built into the mapping layer. When a source schema changes, affected fields are flagged automatically rather than discovered at runtime</li>
+      </ul>
+      <p>
+        I used Figma MCP to pull directly from the existing design system, ensuring every component matched the broader platform. Claude Code handled the interactive prototype, deployed to Surge for stakeholder review and async feedback.
+      </p>
+      <div class="cs-image-block" style="aspect-ratio: auto; background: #111;">
+        <img src="img/cs01-figma-overview.png" alt="Figma workspace showing the full scope of the API Connect ingestion onboarding project — multiple flows including ingestion onboarding, endpoint mappings, configuration mapping methods, and Groovy expression sections">
+      </div>
+
+      <div class="cs-photo-labeled">
+        <span class="cs-photo-label">Before</span>
+        <div class="cs-image-block" style="aspect-ratio: auto;">
+          <img src="img/cs01-before-3.png" alt="Before — original Admin Config page with basic table and no navigation system">
+        </div>
+      </div>
+
+      <div class="cs-photo-labeled">
+        <span class="cs-photo-label cs-photo-label--after">After</span>
+        <div class="cs-image-block" style="aspect-ratio: auto;">
+          <img src="img/cs01-hero.png" alt="After — redesigned ingestion onboarding with sidebar navigation, multi-field search, and validation status table">
+        </div>
+      </div>
+
+      <div class="cs-image-block" style="aspect-ratio: auto; background: #f0f0f0; margin-top: 16px;">
+        <video autoplay loop muted playsinline style="width:100%;height:100%;object-fit:contain;display:block;">
+          <source src="img/cs01-demo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">03 — What I'd Do Differently</p>
+      <h2 class="cs-section__title">Get the developers in the room earlier.</h2>
+      <div class="cs-callout">
+        <p>I designed the AI-assisted expression builder based on my understanding of the pain points, but I didn't validate it with developers until the prototype was already built. I would push for at least one round of concept testing before committing to the interaction model. This matters especially for a feature where the wrong suggestion is potentially worse than no suggestion at all.</p>
+      </div>
+      <p>
+        I'd also push for clearer success criteria upfront. The brief described the goal as reducing manual effort, but "effort" wasn't defined or measured before we started. Having a baseline — even a rough one — would have made it easier to argue for scope and easier to evaluate the design once it shipped.
+      </p>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">04 — Outcomes &amp; Impact</p>
+      <h2 class="cs-section__title">Less rewriting. More confidence in what's being shipped.</h2>
+      <p>
+        The design is in development. Post-launch metrics aren't available yet, but the expected outcomes are grounded in the specific friction points the design addresses.
+      </p>
+      <ul>
+        <li>Automated field matching eliminates the manual process of identifying source-to-target mappings on initial configuration and after schema updates</li>
+        <li>Transformation logic is generated and explained in context. This removes the dependency on tribal knowledge that currently gates less-technical team owners from reviewing mappings independently</li>
+        <li>Schema version tracking surfaces breaking changes before they hit production, replacing the current pattern of discovering mismatches at runtime</li>
+        <li>The prototype, deployed to Surge, gave stakeholders a clickable experience to evaluate. This reduced the back-and-forth typically needed to align on interaction decisions in enterprise tooling</li>
+      </ul>
+    </div>
+
+    <div class="cs-nav">
+      <a href="work.html" class="cs-nav__item">
+        <p class="cs-nav__dir">← All Work</p>
+        <p class="cs-nav__title">Back to Case Studies</p>
+      </a>
+      <a href="case-study-03.html" class="cs-nav__item cs-nav__item--next">
+        <p class="cs-nav__dir">Next →</p>
+        <p class="cs-nav__title">Chubb Everyday: Agentic Prototype</p>
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Cassandra Douglas</span>
+      <nav class="footer__nav">
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer__copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

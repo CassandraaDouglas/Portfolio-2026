@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protect What You Collect — Cassandra Douglas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>(function(){var t=localStorage.getItem('cd_theme')||'system',a=JSON.parse(localStorage.getItem('cd_a11y')||'{}'),d=document.documentElement;if(t==='dark'||(t==='system'&&matchMedia('(prefers-color-scheme:dark)').matches))d.classList.add('theme-dark');if(a.highContrast)d.classList.add('a11y-high-contrast');if(a.largeText)d.classList.add('a11y-large-text');if(a.dyslexia)d.classList.add('a11y-dyslexia');if(a.lineSpacing)d.classList.add('a11y-line-spacing');if(a.reduceMotion)d.classList.add('a11y-reduce-motion');}());</script>
+</head>
+<body>
+
+  <script>if(!sessionStorage.getItem('cd_auth')){window.location.replace('password.html');}</script>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <nav class="nav scrolled" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">CD</a>
+      <ul class="nav__links">
+        <li><a href="work.html" class="nav__link">Work</a></li>
+        <li><a href="resume.html" class="nav__link">Resume</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+      <button class="nav__settings-btn" id="settingsBtn" aria-label="Open display settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="cs-hero container">
+    <a href="work.html" class="cs-hero__back">← Back to Work</a>
+    <div class="cs-hero__tags">
+      <span class="tag">UX Design</span>
+      <span class="tag">Consumer Portal</span>
+      <span class="tag">Service Design</span>
+      <span class="tag">Mobile-First</span>
+      <span class="tag">Blueprint Design</span>
+    </div>
+    <h1 class="cs-hero__title">Protect What You Collect</h1>
+    <p class="cs-hero__desc">
+      Chubb's Valuable Articles customers had one option to get covered: call an agent.
+      I designed the platform that changed that, taking it from a blank canvas to a live product.
+    </p>
+    <div class="cs-hero__image">
+      <img src="img/cs4-dashboard.png" alt="VAC Collection Management Portal, personalized collector dashboard showing insured watches and policy summary">
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="cs-stats">
+      <div class="cs-stat">
+        <p class="cs-stat__label">Role</p>
+        <p class="cs-stat__value">UX Designer</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Timeline</p>
+        <p class="cs-stat__value">1 year, 2024–2025</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Tools</p>
+        <p class="cs-stat__value">Figma, ChatGPT, Chubb AI</p>
+      </div>
+      <div class="cs-stat">
+        <p class="cs-stat__label">Impact</p>
+        <p class="cs-stat__value">First digital self-service path for Chubb Valuable Articles; now live</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-body container">
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">01. Context &amp; Challenge</p>
+      <h2 class="cs-section__title">Collectors had valuable things to protect. And no digital way to do it.</h2>
+      <p>
+        Chubb's Valuable Articles Coverage, which includes jewelry, watches, fine art, and collectibles, had no
+        digital presence for customers who wanted to manage their own coverage. If you wanted
+        to quote, bind, pay, or update a policy, you called an agent. That was the only path.
+      </p>
+      <p>
+        For Chubb, this wasn't just a UX gap. It was a competitive one. Without a collection
+        management portal, the business couldn't effectively reach a growing segment: emerging
+        collectors who expect a digital-first experience and don't need a phone call to feel
+        confident about a purchase. There was a larger ambition in play too: a $137 million
+        premium target by 2029, with this platform as a key lever to reach it.
+      </p>
+      <div class="cs-callout">
+        <p>
+          Nothing existed before this. No legacy portal to migrate, no prior design to reference.
+          The brief was to build it from scratch.
+        </p>
+      </div>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">02. My Role &amp; Process</p>
+      <h2 class="cs-section__title">From the first scenario to the final spec.</h2>
+      <p>
+        This was my first project after moving from Chubb's multi-disciplinary product teams, Cyber and Auto,
+        into the newly formed Proposition &amp; Partnerships pillar of the
+        design system team. The scope was end-to-end: design every touchpoint of the Valuable
+        Articles portal, from the entry point and authentication flow through the collection
+        dashboard, quoting, payment, and claims.
+      </p>
+      <p>
+        I started by building a comprehensive scenario booklet, a visual inventory of every
+        user path across the platform before a single screen was finalized. New business happy
+        paths, endorsed items, verified and unverified purchases, denied coverage, document
+        states, mobile progress flows. Mapping all of it upfront meant edge cases surfaced in
+        documentation, not in legal review.
+      </p>
+      <img src="img/cs4-booklet.jpg" alt="Scenario booklet showing all user flows across the VAC portal, including new business, endorsements, claims, dashboard states, and mobile paths" class="cs-photo">
+      <p>
+        Legal review followed in multiple rounds, working through every flow: point-of-sale,
+        verified and unverified purchase, endorsements over threshold, the claims flow,
+        the dashboard, and denied coverage states. Each round required coordinated updates
+        across an interconnected system of screens, not isolated fixes.
+      </p>
+      <img src="img/cs4-legal.png" alt="Legal review rounds 1 and 2 in Figma showing annotated flows for new business, endorsements, claims, dashboard, and denied coverage states" class="cs-photo">
+      <p>
+        Dev handoff was the final design phase. I built a responsive specification document
+        covering five breakpoints from XL through mobile, so engineers had a precise layout
+        reference for how every screen adapts. The entry point was designed to serve both
+        new and returning collectors, with a direct path to coverage surfaced immediately.
+      </p>
+      <img src="img/cs4-devspec.png" alt="Responsive dev spec document showing layout behavior at XL, L, MD, SM, and XS breakpoints for the VAC entry point" class="cs-photo">
+      <p>
+        The authentication flow was designed to feel frictionless at the moment it matters
+        most, when a collector is ready to act. A split layout with editorial photography
+        on the right keeps the experience feeling premium, not transactional.
+      </p>
+      <img src="img/cs4-auth.png" alt="Access your quote authentication screen with verification code options and luxury watch editorial photography" class="cs-photo">
+      <p>
+        From entry point to quote, the full flow was designed to move quickly.
+        A collector can go from landing on the portal to a bound policy in minutes.
+      </p>
+      <video class="cs-photo" autoplay loop muted playsinline>
+        <source src="img/cs4-demo.mp4" type="video/mp4">
+      </video>
+      <p>
+        The claims experience required the same rigor as the quoting flow. I designed a
+        five-step FNOL process covering Claim details, Select an item, Supporting documents,
+        Claimant information, and Claim submission. The structure was built to guide collectors
+        through an inherently stressful moment with clear progress and minimal friction.
+      </p>
+      <img src="img/cs4-claims.png" alt="Start a new claim, FNOL flow step 1, showing the five-step stepper and claim details form with policy number, incident type, date, and description fields" class="cs-photo">
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">03. Constraints &amp; Organizational Context</p>
+      <h2 class="cs-section__title">The design work was the easier part.</h2>
+      <div class="cs-callout">
+        <p>
+          A constrained budget shaped every decision, including not just what got built
+          but what had to be defended and re-defended at each stage of the project.
+        </p>
+      </div>
+      <p>
+        The more unexpected constraint was the collaboration dynamic. A business analyst
+        on the project had edit access to the Figma files and regularly made changes
+        directly to the designs. On a project this complex, running multiple rounds of
+        legal review across an interconnected screen system, unmanaged edits created real
+        risk. I reframed the working relationship, treating her as an active design
+        collaborator with a defined role rather than working around her. It required more
+        active oversight than I'd anticipated, but it also pushed the documentation to
+        be more explicit and rigorous than it might have been otherwise.
+      </p>
+      <p>
+        Coming into a new pillar of the team also meant there was no established process
+        for this type of work at Chubb. Consumer-facing, direct-to-customer, and greenfield,
+        it sat outside the B2B agent experience the broader team had done before. I was
+        building the approach as the project moved forward, which is a different kind of
+        challenge than executing within a known playbook.
+      </p>
+    </div>
+
+    <div class="cs-section fade-section">
+      <p class="cs-section__label">04. Outcomes &amp; Impact</p>
+      <h2 class="cs-section__title">Collectors can now do it themselves. That's the whole point.</h2>
+      <p>
+        The platform is live. Chubb customers can now quote, bind, pay, and manage their
+        Valuable Articles coverage entirely online with no agent call required. The portal is
+        open to anyone, with no prior Chubb relationship needed, coverage starting at $1,000,
+        and a seamless path from first visit to bound policy.
+      </p>
+      <img src="img/cs4-kpi.png" alt="KPI report design highlight slide showing Collection Management Portal mobile screens including the dashboard, add valuables flow, and collection confirmation" class="cs-photo">
+      <p>
+        What launched is a mobile-first experience that brings collectors into the Chubb
+        ecosystem through something that feels personal to them. It is not an insurance form.
+        It is a home for the things they care about most. The platform is positioned as a
+        differentiator for Chubb in the embedded insurance market within the luxury retail sector.
+      </p>
+      <div class="cs-callout">
+        <p>Targeting $137 million in premium by 2029.</p>
+      </div>
+      <p>
+        When the platform launched in March 2026, it was featured in Chubb's internal news.
+      </p>
+      <div class="cs-image-block" style="aspect-ratio: auto; height: auto;">
+        <img src="img/cs4-launch-article.png" alt="Chubb internal article: Your Valuables, Protected — The Digital Way with Chubb, announcing the launch of the digital collection management portal" style="object-fit: contain; height: auto;">
+      </div>
+      <p>
+        You can see it live at <a href="https://www.chubb.com/us-en/individuals-families/products/valuables.html" target="_blank" rel="noopener">chubb.com/valuables</a>.
+      </p>
+    </div>
+
+    <div class="cs-nav">
+      <a href="case-study-04.html" class="cs-nav__item">
+        <p class="cs-nav__dir">← Previous</p>
+        <p class="cs-nav__title">The Living Design System</p>
+      </a>
+      <a href="case-study-06.html" class="cs-nav__item cs-nav__item--next">
+        <p class="cs-nav__dir">Next →</p>
+        <p class="cs-nav__title">From Spoke to Suite</p>
+      </a>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="footer__name">Cassandra Douglas</span>
+      <nav class="footer__nav">
+        <a href="work.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <span class="footer__copy">© 2026</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
