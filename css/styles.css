@@ -26,9 +26,9 @@
   --font-mono:    'Space Mono', monospace;
 
   --nav-h:        72px;
-  --container:    1280px;
+  --container:    1100px;
   --section-py:   120px;
-  --gap:          24px;
+  --gap:          40px;
 
   --r-sm:   8px;
   --r-md:   14px;
@@ -453,10 +453,16 @@ em { font-style: italic; }
 
 .work-card--wide { grid-column: span 2; }
 
-.work-card__image { width: 100%; aspect-ratio: 16/7; overflow: hidden; position: relative; }
+.work-grid--home { align-items: stretch; }
+.work-grid--home .work-card { display: flex !important; flex-direction: column; background: #5B3DF5; }
+.work-grid--home .work-card:hover { background: #4B32CC; }
+.work-grid--home .work-card__image { aspect-ratio: 4/3; flex-shrink: 0; }
+.work-grid--home .work-card__content { flex: 1; }
+
+.work-card__image { width: 100%; aspect-ratio: 16/5; overflow: hidden; position: relative; }
 .work-card__image::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background var(--t-mid); pointer-events: none; }
-.work-card:hover .work-card__image::after { background: rgba(0,0,0,0.7); }
-.work-card--wide .work-card__image { aspect-ratio: 16/6; }
+.work-card:hover .work-card__image::after { background: rgba(0,0,0,0.25); }
+.work-card--wide .work-card__image { aspect-ratio: 16/5; }
 
 .work-card__placeholder {
   width: 100%; height: 100%;
@@ -473,7 +479,7 @@ em { font-style: italic; }
 .work-card__image img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform var(--t-slow); display: block; }
 .work-card:hover .work-card__image img { transform: scale(1.04); }
 
-.work-card__content { padding: 28px 32px 32px; background: #5B3DF5; transition: background var(--t-mid); }
+.work-card__content { padding: 20px 24px 24px; background: #5B3DF5; transition: background var(--t-mid); }
 .work-card:hover .work-card__content { background: #4B32CC; }
 
 .work-card__meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
@@ -911,7 +917,7 @@ em { font-style: italic; }
   align-items: start;
 }
 
-.resume-sidebar { position: sticky; top: calc(var(--nav-h) + 24px); }
+.resume-sidebar { position: static; }
 
 .resume-block { margin-bottom: 40px; }
 
